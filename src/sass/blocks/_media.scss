@@ -32,13 +32,34 @@
     .skills {
         &__wrapper {
             justify-content: center;
-            grid-template-columns: repeat(3, 270px);
+            grid-template-columns: repeat(auto-fit, 270px);
         }
         &__slider {
             margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(auto,350px));
+            justify-content: center;
             &__gauge {
                 width: 100%;
             }
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 60px 0 0 0;
+            justify-content: center;
+            column-gap: 30px;
         }
     }
 }
@@ -91,15 +112,6 @@
             }
         }
     }
-    .skills {
-        &__wrapper {
-            grid-template: repeat(3, 230px) / repeat(3, 230px);
-            
-        }
-        &_item {
-            padding: 10px;
-        }
-    }
 }
 
 @media (max-width: 768px) {
@@ -138,13 +150,8 @@
             grid-template-columns: 1fr;
         }
     }
-    .skills {
-        &__wrapper {
-            grid-template: repeat(4,230px)/repeat(2,230px);
-        }
-        &__slider {
-            grid-template-columns: repeat(2,1fr);
-        }
+    .portfolio {
+        padding-top: 40px;
     }
 }
 
@@ -213,23 +220,17 @@
         .divider {
             margin-top: 10px;
         }
-        .title_fz36 {
+        .title {
+            &_fz36 {
             line-height: 36px;
             margin-top: 15px;
+            }
         }
+    }
+    .price {
         &__wrapper {
-            margin-top: 20px;
-            grid-template: repeat(7,270px)/ 270px;
-            gap: 20px;
-        }
-        &_item {
-            padding: 30px 30px 25px 30px;
-        }
-        &__slider {
-            margin-top: 40px;
-            justify-content: center;
             grid-template-columns: 300px;
-            gap: 44px;
+            padding-top: 20px;
         }
     }
 }

@@ -3,8 +3,8 @@
     &__wrapper {
         margin: 60px 10px 0 10px;
         display: grid;
-        grid-template-columns: repeat(4, 270px);
-        grid-template-rows: repeat(3, 270px);
+        grid-template: repeat(2, 270px) / repeat(4, 270px);
+        grid-auto-rows: 270px;
         gap: 13px;
     }
     &_item {
@@ -27,8 +27,8 @@
         margin-top: 128px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 62px;
-        grid-auto-rows: 62px;
+        grid-template-rows: 60px;
+        grid-auto-rows: 60px;
         column-gap: 45px;
         row-gap: 38px;
         &_item {
